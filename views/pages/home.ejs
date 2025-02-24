@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("../partials/head.ejs")  %>
+<%- include("../partials/head")  %>
 <body>
-    <%- include("../partials/navigation_bar.ejs")  %>
-    <%- include("../partials/header.ejs")  %>
-    <div class="video-background-container">
-        <video
-          class="background-video"
-          autoplay="autoplay"
-          muted="muted"
-          playsinline="true"
-          loop="loop"
-          src="/videos/background_video.mp4"
-        ></video>
-        <div class="video-overlay">
-   hiii
+    <div class="main">
+    <div class="video">
+    <video autoplay loop muted plays-inline class="back-video">
+        <source src="/videos/background_video.mp4" type="video/mp4">
+    </video>
+    <%- include("../partials/navigation_bar")  %>
+    <header class="header">
+        <h1 class="title">
+            Mythical creatures
+        </h1>
+</header>
+<div>
+  <h3><%= subtitle  %></h3>
+  <%= intro %>
 </div>
-    </div>
+   </div>
+</div> 
+  <%- include("../partials/footer")  %>
 </body>
 </html>
