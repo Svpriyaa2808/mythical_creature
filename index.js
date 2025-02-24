@@ -1,10 +1,12 @@
 import express from "express";
 import landRouter from "./routes/land_router.js";
 import waterRouter from "./routes/water_router.js";
+import * as dotenv from "dotenv";
 import * as path from "path";
 
 const app = express();
-const PORT = 3011;
+dotenv.config();
+const PORT = process.env.PORT;
 
 app.set("view engine","ejs");
 const __dirname = path.resolve();
