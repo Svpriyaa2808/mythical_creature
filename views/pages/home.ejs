@@ -2,23 +2,16 @@
 <html lang="en">
 <%- include("../partials/head")  %>
 <body>
-    <div class="main">
+  <div class="main">
     <div class="video">
-    <video autoplay loop muted plays-inline class="back-video">
+      <video autoplay loop muted plays-inline class="back-video">
         <source src="/videos/background_video.mp4" type="video/mp4">
-    </video>
-    <%- include("../partials/navigation_bar")  %>
-    <header class="header">
-        <h1 class="title">
-            Mythical creatures
-        </h1>
-</header>
-<div>
-  <h3><%= subtitle  %></h3>
-  <%= intro %>
-</div>
-   </div>
-</div> 
+      </video>
+      <%- include("../partials/navigation_bar")  %>
+      <%- include("../partials/header")  %>
+      <%- include("../partials/maincontent")  %>
+    </div>
+  </div> 
   <%- include("../partials/footer")  %>
 </body>
 </html>

@@ -17,15 +17,14 @@ body {
 
 .header {
   margin: 0;
- 
 }
 
 .title {
   text-align: center;
-  color: white;
-  font-size: 3rem;
+  color: rgb(144, 169, 75);
+  font-size: 2.4rem;
   text-transform: uppercase;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-style: italic;
 }
 
@@ -43,7 +42,7 @@ body {
   padding: 8px;
   text-decoration: underline;
   font-size: 1.4rem;
-  color: white;
+  color: rgb(160, 200, 109);
   display: inline-block;
 }
 
@@ -57,15 +56,52 @@ body {
 }
 
 .back-video {
-  position: fixed; /* Ensures the video covers the entire screen */
+  position: fixed; 
   top: 0;
   left: 0;
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
-  object-fit: cover; /* Ensures the video covers the entire screen without stretching */
-  z-index: -1; /* Moves the video behind other content */
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; 
 }
 
+.content {
+  margin: 16px;
+  color: white;
+}
+
+.content h3{
+  color: rgb(171, 190, 103);
+  margin: 8px;
+ font-size: 1.2rem;
+}
+
+.content p {
+  margin: 8px;
+  font-size: 22px;
+  text-indent: 30px;
+}
+
+.detailed_links {
+  margin: 32px 15%;
+}
+
+.detailed_links p {
+  text-align: center;
+}
+
+.link_list li {
+  text-align: center;
+  list-style: none;
+}
+
+.link_list a {
+  text-decoration: none;
+  margin: 8px;
+  padding: 8px;
+  color: rgb(205, 238, 56);
+  font-size: 24px;
+}
 
 .footer {
   text-align: center;

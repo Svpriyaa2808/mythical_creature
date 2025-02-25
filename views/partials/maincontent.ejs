@@ -1,0 +1,26 @@
+<div class="content">
+    <% content.forEach(content => { %>
+        <h3><%= content.heading %> </h3>
+        <p><%= content.description %></p>
+    <% }); %>
+
+    <%if(locals.pageType) { %>
+        <% if(pageType === "land") { %>
+            <div class="detailed_links">
+                <p>Click here to learn more about</p>
+                <ul class="link_list">
+                    <li><a href="/landcreation/unicorn">Unicorn</a></li>
+                    <li><a href="/landcreation/griffins">Griffin</a></li>
+                </ul>  
+            </div>
+       <% } else if(pageType === "water") { %>
+            <div class="detailed_links">
+                <p>Click here to learn more about</p>
+                <ul class="link_list">
+                    <li><a href="/watercreation/mermaids">Mermaids</a></li>
+                    <li><a href="/watercreation/hydra">Hydra</a></li>
+                </ul>  
+            </div>
+       <% } %>
+    <% } %>
+</div>

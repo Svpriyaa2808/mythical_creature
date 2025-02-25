@@ -3,7 +3,7 @@ import landRouter from "./routes/land_router.js";
 import waterRouter from "./routes/water_router.js";
 import * as dotenv from "dotenv";
 import * as path from "path";
-import contentArray from "./data/data.js";
+import { homeContent} from "./data/data.js"; 
 
 const app = express();
 dotenv.config();
@@ -15,11 +15,10 @@ app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"public")));
 
 app.get("/",(req,res)=> {
-    let home = contentArray[0];
     res.render("pages/home",{
+        pageTitle : "Mythical creatures",
         pageType : "home",
-        subtitle : home.heading,
-        intro : home.description
+        content: homeContent
     })
 })
 
