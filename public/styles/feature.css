@@ -66,3 +66,7 @@ body {
     flex-direction: column;
     margin: 16px;
   }  
+
+  .creature_links a {
+    color: #502274;
+  }
