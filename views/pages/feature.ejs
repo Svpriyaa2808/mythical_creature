@@ -1,31 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>video</title>
-    <link rel="stylesheet" href="/styles/styles.css">
-</head>
+<%- include("../partials/head")  %>
 <body>
-    <div class="main">
-    <%- include("../partials/navigation_bar.ejs")  %>
-    <%- include("../partials/header.ejs")  %>
-    
-        <video
-          class="background-video"
-          autoplay="autoplay"
-          muted="muted"
-          playsinline="true"
-          loop="loop"
-          src="/videos/dragon.mp4"
-        ></video>
-        <div class="video-overlay">
-   hiii
-</div>
-    
-</div>
-    <footer>
-        <p>copy 2025</p>
-    </footer>
+   <%- include("../partials/header")  %>
+   <div class="main"> 
+      <div class="featured">
+         <p><%= subroute.description %></p>
+         <img src="<%= subroute.image %>" alt="<%= subroute.name %>" width="35%" height="auto">
+         
+         <div class="characteristics">
+            <p><span>Shape :</span> <%= subroute.shape  %></p>
+            <p><span>Origin :</span> <%= subroute.origin  %></p>
+            <p><span>Power :</span> <%= subroute.power  %></p>
+            <p><span>Habitat :</span> <%= subroute.habitat  %></p>
+            <p><span>Alignment :</span> <%= subroute.alignment  %></p>
+            <p><span>Height/Size :</span> <%= subroute.height  %></p>
+         </div>
+      </div>
+   </div>
+   <%- include("../partials/footer")  %>
 </body>
 </html>

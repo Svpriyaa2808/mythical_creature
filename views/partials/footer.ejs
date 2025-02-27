@@ -1,3 +1,35 @@
 <footer class="footer">
-    <p>&copy; 2025</p>
+    <% if(locals.renderPage){ %>
+        <% if(renderPage === "home") { %>
+            <div class="footer_title">
+                <p>Mythical creatures</p>
+                <p>|</p>
+                <p>&copy; All Rights Reserved 2025</p>
+            </div> 
+       <% } else { %>
+            <div class="links">
+                <div class="home_links">
+                    <p><a href="/">Home</a></p>
+                    <p>|</p>
+                    <p><a href="/landcreation">Land</a></p>
+                    <p>|</p>
+                    <p><a href="/watercreation">Water</a></p>
+                </div>
+                
+                <div class="creature_links">
+                    <a href="/landcreation/unicorn">Unicorn</a>
+                    <a href="/landcreation/griffin">Griffin</a>
+                    <a href="/watercreation/mermaid">Mermaid</a>
+                    <a href="/watercreation/kraken">Kraken</a>
+                </div>
+            </div>
+                
+            <div class="footer_title">
+                <p>Mythical creatures</p>
+                <p>|</p>
+                <p>&copy; All Rights Reserved 2025</p>
+            </div>
+        <% } %>
+    <% } %>
+    
 </footer>

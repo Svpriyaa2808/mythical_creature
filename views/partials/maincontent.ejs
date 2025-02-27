@@ -1,6 +1,5 @@
 <div class="content">
     <% content.forEach(content => { %>
-        <h3><%= content.heading %> </h3>
         <p><%= content.description %></p>
     <% }); %>
 
@@ -10,15 +9,15 @@
                 <p>Click here to learn more about</p>
                 <ul class="link_list">
                     <li><a href="/landcreation/unicorn">Unicorn</a></li>
-                    <li><a href="/landcreation/griffins">Griffin</a></li>
+                    <li><a href="/landcreation/griffin">Griffin</a></li>
                 </ul>  
             </div>
        <% } else if(pageType === "water") { %>
             <div class="detailed_links">
                 <p>Click here to learn more about</p>
                 <ul class="link_list">
-                    <li><a href="/watercreation/mermaids">Mermaids</a></li>
-                    <li><a href="/watercreation/hydra">Hydra</a></li>
+                    <li><a href="/watercreation/mermaid">Mermaid</a></li>
+                    <li><a href="/watercreation/kraken">Kraken</a></li>
                 </ul>  
             </div>
        <% } %>

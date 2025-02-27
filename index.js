@@ -3,7 +3,7 @@ import landRouter from "./routes/land_router.js";
 import waterRouter from "./routes/water_router.js";
 import * as dotenv from "dotenv";
 import * as path from "path";
-import { homeContent} from "./data/data.js"; 
+import { homeContent,homeStyle} from "./data/data.js"; 
 
 const app = express();
 dotenv.config();
@@ -18,9 +18,12 @@ app.get("/",(req,res)=> {
     res.render("pages/home",{
         pageTitle : "Mythical creatures",
         pageType : "home",
-        content: homeContent
-    })
-})
+        styleSheet : [homeStyle],
+        logo : "/images/alien-monster-svgrepo-com.svg",
+        content: homeContent,
+        renderPage : "home"
+    });
+});
 
 app.use("/landcreation",landRouter);
 app.use("/watercreation",waterRouter);
